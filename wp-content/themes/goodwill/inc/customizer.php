@@ -1,4 +1,7 @@
 <?php
+	if ( ! defined( 'ABSPATH' ) ) {
+		exit;
+	}
 /**
  * goodwill Theme Customizer
  *

@@ -1,5 +1,7 @@
 <?php
-
+	if ( ! defined( 'ABSPATH' ) ) {
+		exit;
+	}
 	/**
 	 * Редирект на головну із site.com/wp-admin
 	 */

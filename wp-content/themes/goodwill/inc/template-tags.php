@@ -1,4 +1,7 @@
 <?php
+	if ( ! defined( 'ABSPATH' ) ) {
+		exit;
+	}
 /**
  * Custom template tags for this theme
  *
