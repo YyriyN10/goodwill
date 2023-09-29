@@ -12,8 +12,50 @@
 		}
 
 		pll_register_string(
-			'goodwill_btn_go',
-			'Давай діяти',
+			'goodwill_footer_social_title',
+			'Ми у соцмережах',
+			'Переклади',
+			false
+		);
+
+		pll_register_string(
+			'goodwill_footer_contact_title',
+			'Наші контакти',
+			'Переклади',
+			false
+		);
+
+		pll_register_string(
+			'goodwill_btn_service_price',
+			'Розрахувати вартість послуги',
+			'Переклади',
+			false
+		);
+
+		pll_register_string(
+			'goodwill_btn_leave_request',
+			'Залишити заявку',
+			'Переклади',
+			false
+		);
+
+		pll_register_string(
+			'goodwill_btn_contact_me',
+			'Зв’яжіться зі мною',
+			'Переклади',
+			false
+		);
+
+		pll_register_string(
+			'goodwill_btn_service_price',
+			'Розрахувати вартість послуги',
+			'Переклади',
+			false
+		);
+
+		pll_register_string(
+			'goodwill_block_title_our_services',
+			'Наші послуги',
 			'Переклади',
 			false
 		);

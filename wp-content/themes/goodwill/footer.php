@@ -1,3 +1,4 @@
+
 <?php
 	if ( ! defined( 'ABSPATH' ) ) {
 		exit;
@@ -12,22 +13,47 @@
  * @package goodwill
  */
 
-?>
+$sitePhone = carbon_get_theme_option('goodwill_phone_number');
+$siteEmail = carbon_get_theme_option('goodwill_email_address');
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'goodwill' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'goodwill' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'goodwill' ), 'goodwill', '<a href="https://smmstudio.com/">smmstudio</a>' );
-				?>
-		</div><!-- .site-info -->
+$phoneToCall = preg_replace( '/[^0-9]/', '', $sitePhone);
+
+
+?>
+  </main>
+	<footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="content col-12">
+          <div class="social-list">
+            <h3 class="footer-subtitle"><?php echo esc_html( pll__( 'Ми у соцмережах' ) ); ?>:</h3>
+            <a href="" target="_blank"></a>
+          </div>
+          <div class="contacts">
+            <h3 class="footer-subtitle"><?php echo esc_html( pll__( 'Наші контакти' ) ); ?>:</h3>
+            <a href="tel:<?php echo $phoneToCall;?>" class="item">
+              <?php echo $sitePhone;?>
+            </a>
+            <a href="mailto:<?php echo antispambot($siteEmail, 1);?>" class="item">
+	            <?php echo antispambot($siteEmail);?>
+            </a>
+          </div>
+          <nav>
+	          <?php
+		          wp_nav_menu(
+			          array(
+				          'theme_location' => 'menu-2',
+				          'menu_id'        => 'footer-menu',
+				          'container' => false,
+				          'menu_class' => 'footer-menu',
+			          )
+		          );
+	          ?>
+          </nav>
+        </div>
+      </div>
+    </div>
+
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

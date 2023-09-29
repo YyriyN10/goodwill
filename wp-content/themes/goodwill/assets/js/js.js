@@ -1,4 +1,6 @@
-jQuery(function() {
+jQuery(function($) {
+
+
 
 
   //Get Window Width, Height
